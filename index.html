@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Municipality Employment Statistics in Finland</title>
+    <style>
+      body {
+        font-family: Verdana, Arial, sans-serif;
+      }
+
+      .center {
+        margin: auto;
+        padding: 60px;
+        width: 60%;
+      }
+
+      table {
+        border-collapse: collapse;
+        font-size: 16px;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      th {
+        background-color: #b7d0ff;
+        font-weight: bold;
+        padding: 12px 0px 12px 6px;
+        border-bottom: 2px solid gray;
+      }
+
+      th,
+      td {
+        padding: 6px;
+        border-bottom: 1px solid gray;
+      }
+
+      th,
+      td:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+
+      td:last-child {
+        text-align: right;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      /* Conditional Styling */
+      tr[data-employment-percent-gt="45"] {
+        background-color: #abffbd;
+      }
+
+      tr[data-employment-percent-lt="25"] {
+        background-color: #ff9e9e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Municipality Employment Statistics in Finland</h1>
+      <table id="employment-table">
+        <thead>
+          <tr>
+            <th>Municipality</th>
+            <th>Population</th>
+            <th>Employment amount</th>
+            <th>Employment-%</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="table_list.json"></script>
+    <script src="list.json"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
